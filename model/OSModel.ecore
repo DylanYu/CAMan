@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="osmodel" nsURI="http://www.sei.pku.edu.cn/rsa/osmodel" nsPrefix="osmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="ServerWrap">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="vm"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongTo" eType="#//ClusterWrap"
+        eOpposite="#//ClusterWrap/servers"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClusterWrap">
+    <eAnnotations source="http://www.sei.pku.edu.cn/rsa">
+      <details key="RootClass" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servers" ordered="false"
+        upperBound="-1" eType="#//ServerWrap" containment="true" eOpposite="#//ServerWrap/belongTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="softwares" upperBound="-1"
+        eType="#//WebWrap" containment="true" eOpposite="#//WebWrap/belongTo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="cluster"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebWrap">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="webapp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hostOn" eType="#//ServerWrap"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongTo" eType="#//ClusterWrap"
+        eOpposite="#//ClusterWrap/softwares"/>
+  </eClassifiers>
+</ecore:EPackage>

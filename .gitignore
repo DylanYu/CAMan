@@ -1,0 +1,5 @@
+bin/*
+config/api.local.properties
+config/api.properties
+config/host.properties
+lib/*

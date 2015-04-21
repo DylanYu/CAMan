@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsch_ssh/jsch-0.1.51.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/openstack4j/openstack4j-2.0.1-withdeps.jar" sourcepath="lib/openstack4j/openstack4j-2.0.1-withdeps-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-lang-2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-configuration-1.10.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
