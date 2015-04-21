@@ -96,8 +96,8 @@
       </modelFacet>
       <labels
           visualID="5002"
-          editPartClassName="ServerWrapNameServerIdEditPart"
-          itemSemanticEditPolicyClassName="ServerWrapNameServerIdItemSemanticEditPolicy"
+          editPartClassName="ServerWrapNameEditPart"
+          itemSemanticEditPolicyClassName="ServerWrapNameItemSemanticEditPolicy"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -110,8 +110,6 @@
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="OSModel.genmodel#//osmodel/ServerWrap/name"/>
-          <metaFeatures
-              href="OSModel.genmodel#//osmodel/ServerWrap/serverId"/>
           <editableMetaFeatures
               href="OSModel.genmodel#//osmodel/ServerWrap/name"/>
         </modelFacet>
@@ -154,6 +152,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="WebWrapHostOn"
             description="Create new WebWrapHostOn"
+            smallIconPath="/OSModel.edit/icons/full/obj16/WebWrapHostOn.gif"
             genLinks="//@diagram/@links.0"/>
       </groups>
     </palette>

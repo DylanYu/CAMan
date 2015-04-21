@@ -32,7 +32,9 @@
           title="WebWrapHostOn"
           description="Create new WebWrapHostOn">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/WebWrapHostOn.gif"
+            bundle="OSModel.edit"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
