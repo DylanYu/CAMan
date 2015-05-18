@@ -26,6 +26,8 @@ public interface OsmodelFactory extends EFactory
    */
   OsmodelFactory eINSTANCE = osmodel.impl.OsmodelFactoryImpl.init();
 
+
+
   /**
    * Returns a new object of class '<em>Server Wrap</em>'.
    * <!-- begin-user-doc -->
