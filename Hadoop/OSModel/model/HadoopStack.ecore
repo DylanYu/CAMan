@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="hadoopmodel" nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel"
+    nsPrefix="hadoopmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="Cloud">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloud_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloud_owner" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloud_description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" upperBound="-1"
+        eType="#//Server" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="java" upperBound="-1" eType="#//Java"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jobtracker" upperBound="-1"
+        eType="#//JobTracker" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktracker" upperBound="-1"
+        eType="#//TaskTracker" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hdfsnamenode" upperBound="-1"
+        eType="#//HDFSNameNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hdfsdatanode" upperBound="-1"
+        eType="#//HDFSDataNode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Server">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="vm"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_adminpass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_host" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_vm_state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Java">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="java_jdk_version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="6"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="java_install_flavor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="oracle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="java_hostOn" eType="#//Server"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JobTracker">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jobtracker_data_dir" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jobtracker_dependOn" lowerBound="1"
+        eType="#//HDFSNameNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jobtracker_hostOn" eType="#//Server"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskTracker">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tasktracker_data_dir" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktracker_connectTo"
+        lowerBound="1" eType="#//JobTracker"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasktracker_hostOn" eType="#//Server"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HDFSNameNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hdfsnamenode_data_dir"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hdfsnamenode_hostOn" eType="#//Server"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HDFSDataNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hdfsdatanode_data_dir"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hdfsdatanode_connectTo"
+        lowerBound="1" eType="#//HDFSNameNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hdfsdatanode_hostOn" eType="#//Server"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="model"
+            class="model.ModelPackage"
+            genModel="model/Model.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated OSModel -->
+      <package
+            uri="http://www.sei.pku.edu.cn/rsa/osmodel"
+            class="osmodel.OsmodelPackage"
+            genModel="model/OSModel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated HadoopStack -->
+      <package
+            uri="http://www.sei.pku.edu.cn/rsa/hadoopmodel"
+            class="hadoopmodel.HadoopmodelPackage"
+            genModel="model/HadoopStack.genmodel"/>
+   </extension>
+
+</plugin>
