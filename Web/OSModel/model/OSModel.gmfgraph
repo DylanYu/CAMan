@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="osmodel">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="WebWrapSoftware_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="WebWrapWeb_dependOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="WebWrapWeb_connectToTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="PHPWrapSoftware_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="PHPWrapPhp_dependOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ApacheWrapSoftware_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="MySQLWrapSoftware_hostOnTargetDecoration"/>
+    <descriptors name="ServerWrapFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ServerWrapFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ServerWrapServer_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="WebWrapFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="WebWrapFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="WebWrapSoftware_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="WebWrapSoftware_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="WebWrapSoftware_hostOnFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="WebWrapWeb_dependOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="WebWrapWeb_dependOnFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="WebWrapWeb_connectToFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="WebWrapWeb_connectToFigure" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="PHPWrapFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="PHPWrapFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="PHPWrapSoftware_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="PHPWrapSoftware_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="PHPWrapSoftware_hostOnFigure" targetDecoration="//@figures.0/@figures.3"/>
+    </descriptors>
+    <descriptors name="PHPWrapPhp_dependOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="PHPWrapPhp_dependOnFigure" targetDecoration="//@figures.0/@figures.4"/>
+    </descriptors>
+    <descriptors name="ApacheWrapFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ApacheWrapFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ApacheWrapSoftware_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ApacheWrapSoftware_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ApacheWrapSoftware_hostOnFigure" targetDecoration="//@figures.0/@figures.5"/>
+    </descriptors>
+    <descriptors name="MySQLWrapFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="MySQLWrapFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="MySQLWrapSoftware_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MySQLWrapSoftware_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MySQLWrapSoftware_hostOnFigure" targetDecoration="//@figures.0/@figures.6"/>
+    </descriptors>
+  </figures>
+  <nodes name="ServerWrap" figure="ServerWrapFigure"/>
+  <nodes name="WebWrap" figure="WebWrapFigure"/>
+  <nodes name="PHPWrap" figure="PHPWrapFigure"/>
+  <nodes name="ApacheWrap" figure="ApacheWrapFigure"/>
+  <nodes name="MySQLWrap" figure="MySQLWrapFigure"/>
+  <connections name="WebWrapSoftware_hostOn" figure="WebWrapSoftware_hostOnFigure"/>
+  <connections name="WebWrapWeb_dependOn" figure="WebWrapWeb_dependOnFigure"/>
+  <connections name="WebWrapWeb_connectTo" figure="WebWrapWeb_connectToFigure"/>
+  <connections name="PHPWrapSoftware_hostOn" figure="PHPWrapSoftware_hostOnFigure"/>
+  <connections name="PHPWrapPhp_dependOn" figure="PHPWrapPhp_dependOnFigure"/>
+  <connections name="ApacheWrapSoftware_hostOn" figure="ApacheWrapSoftware_hostOnFigure"/>
+  <connections name="MySQLWrapSoftware_hostOn" figure="MySQLWrapSoftware_hostOnFigure"/>
+  <labels name="ServerWrapServer_name" figure="ServerWrapFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="WebWrapSoftware_name" figure="WebWrapFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="PHPWrapSoftware_name" figure="PHPWrapFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="ApacheWrapSoftware_name" figure="ApacheWrapFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="MySQLWrapSoftware_name" figure="MySQLWrapFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+</gmfgraph:Canvas>
