@@ -1,7 +1,0 @@
-# Tracing options for the OSModel.diagram plug-in
-
-# Common issues
-OSModel.diagram/debug=false
-
-# Visual IDs
-OSModel.diagram/debug/visualID=false
