@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="hadoopmodel">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="JavaJava_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HDFSNameNodeHdfsnamenode_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HDFSDataNodeHdfsdatanode_connectToTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HDFSDataNodeHdfsdatanode_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HBaseMasterHbasemaster_dependOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HBaseMasterHbasemaster_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HBaseRegionServerHbaseregionserver_connectToTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HBaseRegionServerHbaseregionserver_hostOnTargetDecoration"/>
+    <descriptors name="ServerFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ServerFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ServerServer_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="JavaFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="JavaFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="JavaJava_jdk_versionFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="JavaJava_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="JavaJava_hostOnFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="HDFSNameNodeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HDFSNameNodeFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HDFSNameNodeHdfsnamenode_data_dirFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HDFSNameNodeHdfsnamenode_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HDFSNameNodeHdfsnamenode_hostOnFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="HDFSDataNodeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HDFSDataNodeFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HDFSDataNodeHdfsdatanode_data_dirFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HDFSDataNodeHdfsdatanode_connectToFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HDFSDataNodeHdfsdatanode_connectToFigure" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="HDFSDataNodeHdfsdatanode_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HDFSDataNodeHdfsdatanode_hostOnFigure" targetDecoration="//@figures.0/@figures.3"/>
+    </descriptors>
+    <descriptors name="HBaseMasterFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HBaseMasterFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HBaseMasterHbasemaster_rootdirFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HBaseMasterHbasemaster_dependOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HBaseMasterHbasemaster_dependOnFigure" targetDecoration="//@figures.0/@figures.4"/>
+    </descriptors>
+    <descriptors name="HBaseMasterHbasemaster_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HBaseMasterHbasemaster_hostOnFigure" targetDecoration="//@figures.0/@figures.5"/>
+    </descriptors>
+    <descriptors name="HBaseRegionServerFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HBaseRegionServerFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HBaseRegionServerHbaseregionserver_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HBaseRegionServerHbaseregionserver_connectToFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HBaseRegionServerHbaseregionserver_connectToFigure" targetDecoration="//@figures.0/@figures.6"/>
+    </descriptors>
+    <descriptors name="HBaseRegionServerHbaseregionserver_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HBaseRegionServerHbaseregionserver_hostOnFigure" targetDecoration="//@figures.0/@figures.7"/>
+    </descriptors>
+  </figures>
+  <nodes name="Server" figure="ServerFigure"/>
+  <nodes name="Java" figure="JavaFigure"/>
+  <nodes name="HDFSNameNode" figure="HDFSNameNodeFigure"/>
+  <nodes name="HDFSDataNode" figure="HDFSDataNodeFigure"/>
+  <nodes name="HBaseMaster" figure="HBaseMasterFigure"/>
+  <nodes name="HBaseRegionServer" figure="HBaseRegionServerFigure"/>
+  <connections name="JavaJava_hostOn" figure="JavaJava_hostOnFigure"/>
+  <connections name="HDFSNameNodeHdfsnamenode_hostOn" figure="HDFSNameNodeHdfsnamenode_hostOnFigure"/>
+  <connections name="HDFSDataNodeHdfsdatanode_connectTo" figure="HDFSDataNodeHdfsdatanode_connectToFigure"/>
+  <connections name="HDFSDataNodeHdfsdatanode_hostOn" figure="HDFSDataNodeHdfsdatanode_hostOnFigure"/>
+  <connections name="HBaseMasterHbasemaster_dependOn" figure="HBaseMasterHbasemaster_dependOnFigure"/>
+  <connections name="HBaseMasterHbasemaster_hostOn" figure="HBaseMasterHbasemaster_hostOnFigure"/>
+  <connections name="HBaseRegionServerHbaseregionserver_connectTo" figure="HBaseRegionServerHbaseregionserver_connectToFigure"/>
+  <connections name="HBaseRegionServerHbaseregionserver_hostOn" figure="HBaseRegionServerHbaseregionserver_hostOnFigure"/>
+  <labels name="ServerServer_name" figure="ServerFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="JavaJava_jdk_version" figure="JavaFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="HDFSNameNodeHdfsnamenode_data_dir" figure="HDFSNameNodeFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="HDFSDataNodeHdfsdatanode_data_dir" figure="HDFSDataNodeFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="HBaseMasterHbasemaster_rootdir" figure="HBaseMasterFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="HBaseRegionServerHbaseregionserver_name" figure="HBaseRegionServerFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+</gmfgraph:Canvas>
