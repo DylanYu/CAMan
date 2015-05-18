@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/OSModel/src" modelPluginID="OSModel" modelName="HadoopStack"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>HadoopStack.ecore</foreignModel>
+  <genPackages prefix="Hadoopmodel" disposableProviderFactory="true" ecorePackage="HadoopStack.ecore#/">
+    <genClasses ecoreClass="HadoopStack.ecore#//Cloud">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Cloud/cloud_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Cloud/cloud_owner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Cloud/cloud_description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/server"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/java"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/jobtracker"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/tasktracker"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/hdfsnamenode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/hdfsdatanode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/hbasemaster"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Cloud/hbaseregionserver"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//Server">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Server/server_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Server/server_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Server/server_status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Server/server_adminpass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Server/server_host"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Server/server_vm_state"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//Java">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Java/java_jdk_version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//Java/java_install_flavor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//Java/java_hostOn"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//JobTracker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//JobTracker/jobtracker_data_dir"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//JobTracker/jobtracker_dependOn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//JobTracker/jobtracker_hostOn"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//TaskTracker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//TaskTracker/tasktracker_data_dir"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//TaskTracker/tasktracker_connectTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//TaskTracker/tasktracker_hostOn"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//HDFSNameNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//HDFSNameNode/hdfsnamenode_data_dir"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//HDFSNameNode/hdfsnamenode_hostOn"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//HDFSDataNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//HDFSDataNode/hdfsdatanode_data_dir"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//HDFSDataNode/hdfsdatanode_connectTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//HDFSDataNode/hdfsdatanode_hostOn"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//HBaseMaster">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//HBaseMaster/hbasemaster_rootdir"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//HBaseMaster/hbasemaster_dependOn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//HBaseMaster/hbasemaster_hostOn"/>
+    </genClasses>
+    <genClasses ecoreClass="HadoopStack.ecore#//HBaseRegionServer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HadoopStack.ecore#//HBaseRegionServer/hbaseregionserver_name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//HBaseRegionServer/hbaseregionserver_connectTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HadoopStack.ecore#//HBaseRegionServer/hbaseregionserver_hostOn"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
