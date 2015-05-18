@@ -1,3 +1,5 @@
+*.class
+*.jar
 bin/*
 config/api.local.properties
 config/api.properties
