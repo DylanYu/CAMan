@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_nje2sPGVEeSOwdxQdL_yzw" type="Ecore" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_nkotRfGVEeSOwdxQdL_yzw" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nkotR_GVEeSOwdxQdL_yzw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkotSPGVEeSOwdxQdL_yzw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkotSfGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkotSvGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkotS_GVEeSOwdxQdL_yzw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkotTPGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkotTfGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkpUUPGVEeSOwdxQdL_yzw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkpUUfGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkpUUvGVEeSOwdxQdL_yzw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="HadoopStackNoRoot.ecore#//Server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nkotRvGVEeSOwdxQdL_yzw" x="240" y="408"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_nkpUU_GVEeSOwdxQdL_yzw" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nkpUVfGVEeSOwdxQdL_yzw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkpUVvGVEeSOwdxQdL_yzw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkpUV_GVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkpUWPGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkpUWfGVEeSOwdxQdL_yzw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkpUWvGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkpUW_GVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkpUXPGVEeSOwdxQdL_yzw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkpUXfGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkpUXvGVEeSOwdxQdL_yzw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="HadoopStackNoRoot.ecore#//Java"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nkpUVPGVEeSOwdxQdL_yzw" x="480" y="432"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_nkpUX_GVEeSOwdxQdL_yzw" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nkp7YPGVEeSOwdxQdL_yzw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkp7YfGVEeSOwdxQdL_yzw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkp7YvGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkp7Y_GVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkp7ZPGVEeSOwdxQdL_yzw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkp7ZfGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkp7ZvGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkp7Z_GVEeSOwdxQdL_yzw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkp7aPGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkp7afGVEeSOwdxQdL_yzw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="HadoopStackNoRoot.ecore#//JobTracker"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nkpUYPGVEeSOwdxQdL_yzw" x="60" y="132"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_nkp7avGVEeSOwdxQdL_yzw" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nkp7bPGVEeSOwdxQdL_yzw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkp7bfGVEeSOwdxQdL_yzw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkp7bvGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkp7b_GVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkp7cPGVEeSOwdxQdL_yzw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkp7cfGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkp7cvGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkqicPGVEeSOwdxQdL_yzw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkqicfGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkqicvGVEeSOwdxQdL_yzw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="HadoopStackNoRoot.ecore#//TaskTracker"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nkp7a_GVEeSOwdxQdL_yzw" x="60" y="252"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_nkqic_GVEeSOwdxQdL_yzw" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nkqidfGVEeSOwdxQdL_yzw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkqidvGVEeSOwdxQdL_yzw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkqid_GVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkqiePGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkqiefGVEeSOwdxQdL_yzw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkqievGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkqie_GVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkqifPGVEeSOwdxQdL_yzw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkqiffGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkqifvGVEeSOwdxQdL_yzw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="HadoopStackNoRoot.ecore#//HDFSNameNode"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nkqidPGVEeSOwdxQdL_yzw" x="408" y="132"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_nkrJgPGVEeSOwdxQdL_yzw" type="2001" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nkrJgvGVEeSOwdxQdL_yzw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkrJg_GVEeSOwdxQdL_yzw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkrJhPGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkrJhfGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkrJhvGVEeSOwdxQdL_yzw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkrJh_GVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkrJiPGVEeSOwdxQdL_yzw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_nkrJifGVEeSOwdxQdL_yzw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_nkrJivGVEeSOwdxQdL_yzw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_nkrJi_GVEeSOwdxQdL_yzw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="HadoopStackNoRoot.ecore#//HDFSDataNode"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nkrJgfGVEeSOwdxQdL_yzw" x="408" y="252"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_nje2sfGVEeSOwdxQdL_yzw"/>
+  <element xmi:type="ecore:EPackage" href="HadoopStackNoRoot.ecore#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_nml1EPGVEeSOwdxQdL_yzw" type="4002" source="_nkpUU_GVEeSOwdxQdL_yzw" target="_nkotRfGVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nml1E_GVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nml1FPGVEeSOwdxQdL_yzw" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nml1FfGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nmmcIPGVEeSOwdxQdL_yzw" x="-21" y="-7"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nml1EfGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//Java/java_hostOn"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nml1EvGVEeSOwdxQdL_yzw" points="[0, 0, -137, -60]$[137, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnmhs_GVEeSOwdxQdL_yzw" id="(0.023809523809523808,0.49333333333333335)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnmhtPGVEeSOwdxQdL_yzw" id="(0.9763313609467456,0.4316546762589928)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nmr7sPGVEeSOwdxQdL_yzw" type="4002" source="_nkpUX_GVEeSOwdxQdL_yzw" target="_nkqic_GVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nmsiwvGVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nmsiw_GVEeSOwdxQdL_yzw" x="44" y="-85"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nmsixPGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nmsixfGVEeSOwdxQdL_yzw" x="-24" y="-6"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nmsiwPGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//JobTracker/jobtracker_dependOn"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nmsiwfGVEeSOwdxQdL_yzw" points="[1, -1, -200, 25]$[185, -24, -16, 2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnkFcPGVEeSOwdxQdL_yzw" id="(0.9829545454545454,0.5932203389830508)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnkFcfGVEeSOwdxQdL_yzw" id="(0.034482758620689655,0.7288135593220338)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nmwNIPGVEeSOwdxQdL_yzw" type="4002" source="_nkpUX_GVEeSOwdxQdL_yzw" target="_nkotRfGVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nmw0MPGVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nmw0MfGVEeSOwdxQdL_yzw" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nmw0MvGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nmw0M_GVEeSOwdxQdL_yzw" x="-14" y="9"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nmwNIfGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//JobTracker/jobtracker_hostOn"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nmwNIvGVEeSOwdxQdL_yzw" points="[4, 6, -176, -241]$[180, 247, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnnIwPGVEeSOwdxQdL_yzw" id="(0.9943181818181818,0.7796610169491526)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnnIwfGVEeSOwdxQdL_yzw" id="(0.44970414201183434,0.014388489208633094)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nmz3gPGVEeSOwdxQdL_yzw" type="4002" source="_nkp7avGVEeSOwdxQdL_yzw" target="_nkpUX_GVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nmz3g_GVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nmz3hPGVEeSOwdxQdL_yzw" x="25" y="-20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nmz3hfGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nmz3hvGVEeSOwdxQdL_yzw" x="-11" y="17"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nmz3gfGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//TaskTracker/tasktracker_connectTo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nmz3gvGVEeSOwdxQdL_yzw" points="[0, 0, -103, -60]$[103, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnlTkfGVEeSOwdxQdL_yzw" id="(0.5,0.06779661016949153)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnlTkvGVEeSOwdxQdL_yzw" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nm3h4PGVEeSOwdxQdL_yzw" type="4002" source="_nkp7avGVEeSOwdxQdL_yzw" target="_nkotRfGVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nm3h4_GVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nm3h5PGVEeSOwdxQdL_yzw" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nm3h5fGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nm3h5vGVEeSOwdxQdL_yzw" x="-19" y="14"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nm3h4fGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//TaskTracker/tasktracker_hostOn"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nm3h4vGVEeSOwdxQdL_yzw" points="[0, 0, 0, -314]$[0, 314, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnnIwvGVEeSOwdxQdL_yzw" id="(0.5,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnnIw_GVEeSOwdxQdL_yzw" id="(0.16568047337278108,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nm6lMPGVEeSOwdxQdL_yzw" type="4002" source="_nkqic_GVEeSOwdxQdL_yzw" target="_nkotRfGVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nm6lM_GVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nm6lNPGVEeSOwdxQdL_yzw" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nm6lNfGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nm6lNvGVEeSOwdxQdL_yzw" x="-11" y="-15"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nm6lMfGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//HDFSNameNode/hdfsnamenode_hostOn"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nm6lMvGVEeSOwdxQdL_yzw" points="[0, 0, 132, -76]$[-132, 76, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnkFcvGVEeSOwdxQdL_yzw" id="(0.0,0.6271186440677966)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnksgPGVEeSOwdxQdL_yzw" id="(0.5798816568047337,0.007194244604316547)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nm9ogPGVEeSOwdxQdL_yzw" type="4002" source="_nkrJgPGVEeSOwdxQdL_yzw" target="_nkqic_GVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nm9og_GVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nm9ohPGVEeSOwdxQdL_yzw" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nm9ohfGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nm9ohvGVEeSOwdxQdL_yzw" x="-11" y="20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nm9ogfGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//HDFSDataNode/hdfsdatanode_connectTo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nm9ogvGVEeSOwdxQdL_yzw" points="[0, 0, 103, -60]$[-103, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnjeYPGVEeSOwdxQdL_yzw" id="(0.5357142857142857,0.01694915254237288)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnjeYfGVEeSOwdxQdL_yzw" id="(0.5369458128078818,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_nnBS4PGVEeSOwdxQdL_yzw" type="4002" source="_nkrJgPGVEeSOwdxQdL_yzw" target="_nkotRfGVEeSOwdxQdL_yzw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_nnBS4_GVEeSOwdxQdL_yzw" visible="false" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nnBS5PGVEeSOwdxQdL_yzw" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_nnBS5fGVEeSOwdxQdL_yzw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nnBS5vGVEeSOwdxQdL_yzw" x="-21" y="-12"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nnBS4fGVEeSOwdxQdL_yzw" fontName="Segoe UI"/>
+    <element xmi:type="ecore:EReference" href="HadoopStackNoRoot.ecore#//HDFSDataNode/hdfsdatanode_hostOn"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nnBS4vGVEeSOwdxQdL_yzw" points="[0, 0, 148, -37]$[-148, 37, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnnIxPGVEeSOwdxQdL_yzw" id="(0.576530612244898,0.9830508474576272)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nnnv0PGVEeSOwdxQdL_yzw" id="(0.834319526627219,0.0)"/>
+  </edges>
+</notation:Diagram>
