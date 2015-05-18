@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="hadoopmodel">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="CloudServerTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="CloudHadoopmasterTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="CloudHadoopslaveTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HadoopMasterHadoopmaster_hostOnTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HadoopSlaveHadoopslave_connectToTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="HadoopSlaveHadoopslave_hostOnTargetDecoration"/>
+    <descriptors name="CloudFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CloudFigure"/>
+    </descriptors>
+    <descriptors name="CloudServerFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CloudServerFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="CloudHadoopmasterFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CloudHadoopmasterFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="CloudHadoopslaveFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="CloudHadoopslaveFigure" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="ServerFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ServerFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ServerServer_nameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HadoopMasterFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HadoopMasterFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HadoopMasterJava_jdk_versionFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HadoopMasterHadoopmaster_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HadoopMasterHadoopmaster_hostOnFigure" targetDecoration="//@figures.0/@figures.3"/>
+    </descriptors>
+    <descriptors name="HadoopSlaveFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="HadoopSlaveFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="HadoopSlaveJava_jdk_versionFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="HadoopSlaveHadoopslave_connectToFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HadoopSlaveHadoopslave_connectToFigure" targetDecoration="//@figures.0/@figures.4"/>
+    </descriptors>
+    <descriptors name="HadoopSlaveHadoopslave_hostOnFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="HadoopSlaveHadoopslave_hostOnFigure" targetDecoration="//@figures.0/@figures.5"/>
+    </descriptors>
+  </figures>
+  <nodes name="Cloud" figure="CloudFigure"/>
+  <nodes name="Server" figure="ServerFigure"/>
+  <nodes name="HadoopMaster" figure="HadoopMasterFigure"/>
+  <nodes name="HadoopSlave" figure="HadoopSlaveFigure"/>
+  <connections name="CloudServer" figure="CloudServerFigure"/>
+  <connections name="CloudHadoopmaster" figure="CloudHadoopmasterFigure"/>
+  <connections name="CloudHadoopslave" figure="CloudHadoopslaveFigure"/>
+  <connections name="HadoopMasterHadoopmaster_hostOn" figure="HadoopMasterHadoopmaster_hostOnFigure"/>
+  <connections name="HadoopSlaveHadoopslave_connectTo" figure="HadoopSlaveHadoopslave_connectToFigure"/>
+  <connections name="HadoopSlaveHadoopslave_hostOn" figure="HadoopSlaveHadoopslave_hostOnFigure"/>
+  <labels name="ServerServer_name" figure="ServerFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="HadoopMasterJava_jdk_version" figure="HadoopMasterFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="HadoopSlaveJava_jdk_version" figure="HadoopSlaveFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+</gmfgraph:Canvas>

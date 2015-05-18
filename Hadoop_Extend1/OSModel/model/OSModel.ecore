@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="osmodel" nsURI="http://www.sei.pku.edu.cn/rsa/osmodel" nsPrefix="osmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="ClusterWrap">
+    <eAnnotations source="http://www.sei.pku.edu.cn/rsa">
+      <details key="RootClass" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servers" ordered="false"
+        upperBound="-1" eType="#//ServerWrap" containment="true" eOpposite="#//ServerWrap/server_belongTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="softwares" upperBound="-1"
+        eType="#//Software" containment="true" eOpposite="#//Software/software_belongTo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="cluster"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerWrap">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="vm"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="server_serverId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server_belongTo" eType="#//ClusterWrap"
+        eOpposite="#//ClusterWrap/servers"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Software" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="software_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="software_status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="software_hostOn" eType="#//ServerWrap"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="software_belongTo" eType="#//ClusterWrap"
+        eOpposite="#//ClusterWrap/softwares"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebWrap" eSuperTypes="#//Software">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="web_dependOn" lowerBound="1"
+        eType="#//PHPWrap"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="web_connectTo" lowerBound="1"
+        eType="#//MySQLWrap"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PHPWrap" eSuperTypes="#//Software">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="php_dependOn" lowerBound="1"
+        eType="#//ApacheWrap"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ApacheWrap" eSuperTypes="#//Software"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MySQLWrap" eSuperTypes="#//Software"/>
+</ecore:EPackage>

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="hadoopmodel_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="hadoopmodel_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="hadoopmodel.diagram.part.HadoopStackDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/HadoopmodelDiagramFile.gif"
+         extensions="hadoopmodel_diagram"
+         default="true"
+         class="hadoopmodel.diagram.part.HadoopStackDiagramEditor"
+         matchingStrategy="hadoopmodel.diagram.part.HadoopStackMatchingStrategy"
+         contributorClass="hadoopmodel.diagram.part.HadoopStackDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="hadoopmodel.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/HadoopmodelDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="hadoopmodel.diagram.part.HadoopStackCreationWizard"
+  	     id="hadoopmodel.diagram.part.HadoopStackCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="OSModel.diagram.InitDiagram"
+            nameFilter="*.hadoopmodel"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="hadoopmodel.diagram.part.HadoopStackInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="OSModel.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="HadoopStackPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="hadoopmodel.diagram.part.HadoopStackDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="HadoopStackPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="hadoopmodel.diagram.part.HadoopStackDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="HadoopStackRender">
+         <Priority name="Lowest"/>
+         <ViewId id="hadoopmodel.diagram.part.HadoopStackDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="hadoopmodel.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="OSModel.diagram.general"
+            name="%prefpage.OSModel.diagram.general"
+            class="hadoopmodel.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="OSModel.diagram.appearance"
+            name="%prefpage.OSModel.diagram.appearance"
+            category="OSModel.diagram.general"
+            class="hadoopmodel.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="OSModel.diagram.connections"
+            name="%prefpage.OSModel.diagram.connections"
+            category="OSModel.diagram.general"
+            class="hadoopmodel.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="OSModel.diagram.printing"
+            name="%prefpage.OSModel.diagram.printing"
+            category="OSModel.diagram.general"
+            class="hadoopmodel.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="OSModel.diagram.rulersAndGrid"
+            name="%prefpage.OSModel.diagram.rulersAndGrid"
+            category="OSModel.diagram.general"
+            class="hadoopmodel.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="OSModel.diagram"
+            labelProvider="hadoopmodel.diagram.sheet.HadoopStackSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="OSModel.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="OSModel.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="hadoopmodel.diagram.sheet.HadoopStackPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="hadoopmodel.diagram.navigator.HadoopStackAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="hadoopmodel.diagram.providers.HadoopStackViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="HadoopStack"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2007,2001,2008"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4009,4010,4011"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="hadoopmodel.diagram.providers.HadoopStackEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="HadoopStack"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2007,2001,2008"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4009,4010,4011"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5007,5001,5008"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="hadoopmodel.diagram.providers.assistants.HadoopStackModelingAssistantProviderOfCloudEditPart">
+         <Priority name="Lowest"/>
+         <object class="hadoopmodel.diagram.edit.parts.CloudEditPart" id="Cloud_1000"/>
+         <context elements="Cloud_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="hadoopmodel.diagram.providers.assistants.HadoopStackModelingAssistantProviderOfHadoopMasterEditPart">
+         <Priority name="Lowest"/>
+         <object class="hadoopmodel.diagram.edit.parts.HadoopMasterEditPart" id="HadoopMaster_2007"/>
+         <context elements="HadoopMaster_2007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="hadoopmodel.diagram.providers.assistants.HadoopStackModelingAssistantProviderOfServerEditPart">
+         <Priority name="Lowest"/>
+         <object class="hadoopmodel.diagram.edit.parts.ServerEditPart" id="Server_2001"/>
+         <context elements="Server_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="hadoopmodel.diagram.providers.assistants.HadoopStackModelingAssistantProviderOfHadoopSlaveEditPart">
+         <Priority name="Lowest"/>
+         <object class="hadoopmodel.diagram.edit.parts.HadoopSlaveEditPart" id="HadoopSlave_2008"/>
+         <context elements="HadoopSlave_2008"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="hadoopmodel.diagram.providers.HadoopStackIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="hadoopmodel.diagram.providers.HadoopStackParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel">
+         <metamodelType
+               id="OSModel.diagram.Cloud_1000"
+               name="%metatype.name.Cloud_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Cloud"
+               edithelper="hadoopmodel.diagram.edit.helpers.CloudEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel">
+         <metamodelType
+               id="OSModel.diagram.HadoopMaster_2007"
+               name="%metatype.name.HadoopMaster_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="HadoopMaster"
+               edithelper="hadoopmodel.diagram.edit.helpers.HadoopMasterEditHelper">
+            <param name="semanticHint" value="2007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel">
+         <metamodelType
+               id="OSModel.diagram.Server_2001"
+               name="%metatype.name.Server_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Server"
+               edithelper="hadoopmodel.diagram.edit.helpers.ServerEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel">
+         <metamodelType
+               id="OSModel.diagram.HadoopSlave_2008"
+               name="%metatype.name.HadoopSlave_2008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="HadoopSlave"
+               edithelper="hadoopmodel.diagram.edit.helpers.HadoopSlaveEditHelper">
+            <param name="semanticHint" value="2008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel">
+         <specializationType
+               id="OSModel.diagram.HadoopSlaveHadoopslave_connectTo_4009"
+               name="%metatype.name.HadoopSlaveHadoopslave_connectTo_4009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4009"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel">
+         <specializationType
+               id="OSModel.diagram.HadoopMasterHadoopmaster_hostOn_4010"
+               name="%metatype.name.HadoopMasterHadoopmaster_hostOn_4010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4010"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.sei.pku.edu.cn/rsa/hadoopmodel">
+         <specializationType
+               id="OSModel.diagram.HadoopSlaveHadoopslave_hostOn_4011"
+               name="%metatype.name.HadoopSlaveHadoopslave_hostOn_4011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4011"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="OSModel.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="OSModel.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="OSModel.diagram.TypeContext">
+         <elementType ref="OSModel.diagram.Cloud_1000"/>
+         <elementType ref="OSModel.diagram.HadoopMaster_2007"/>
+         <elementType ref="OSModel.diagram.Server_2001"/>
+         <elementType ref="OSModel.diagram.HadoopSlave_2008"/>
+         <elementType ref="OSModel.diagram.HadoopSlaveHadoopslave_connectTo_4009"/>
+         <elementType ref="OSModel.diagram.HadoopMasterHadoopmaster_hostOn_4010"/>
+         <elementType ref="OSModel.diagram.HadoopSlaveHadoopslave_hostOn_4011"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="OSModel.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="OSModel.diagram"
+           properties="isURIEditorInput"
+           class="hadoopmodel.diagram.part.HadoopStackUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="OSModel.diagram.resourceContent"/>
+			<contentExtension pattern="OSModel.diagram.domainResourceContent"/>
+            <contentExtension pattern="OSModel.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="OSModel.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="OSModel.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="hadoopmodel.diagram.navigator.HadoopStackNavigatorContentProvider" 
+            labelProvider="hadoopmodel.diagram.navigator.HadoopStackNavigatorLabelProvider"
+            icon="icons/obj16/HadoopmodelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="hadoopmodel_diagram"/>
+               </and>
+               <instanceof value="hadoopmodel.diagram.navigator.HadoopStackAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="hadoopmodel.diagram.navigator.HadoopStackAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="OSModel.diagram.navigatorSorter" 
+               class="hadoopmodel.diagram.navigator.HadoopStackNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="hadoopmodel_diagram"/>
+                  </and>
+                  <instanceof value="hadoopmodel.diagram.navigator.HadoopStackAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="OSModel.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="hadoopmodel.diagram.navigator.HadoopStackDomainNavigatorContentProvider" 
+            labelProvider="hadoopmodel.diagram.navigator.HadoopStackDomainNavigatorLabelProvider"
+            icon="icons/obj16/HadoopmodelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="hadoopmodel"/>
+               </and>
+               <instanceof value="hadoopmodel.diagram.navigator.HadoopStackDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="hadoopmodel.diagram.navigator.HadoopStackDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="OSModel.diagram.navigatorActionProvider"
+            class="hadoopmodel.diagram.navigator.HadoopStackNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="hadoopmodel.diagram.navigator.HadoopStackAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="OSModel.diagram.navigatorLinkHelper"
+            class="hadoopmodel.diagram.navigator.HadoopStackNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="OSModel.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="hadoopmodel.diagram.navigator.HadoopStackAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="hadoopmodel.diagram.part.HadoopStackDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="hadoopmodel.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="hadoopmodel.diagram.updateDiagram"
+         contextId="hadoopmodel.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="OSModel.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="hadoopmodel.diagram.part.HadoopStackDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="hadoopmodel.diagram.edit.parts.CloudEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="hadoopmodel.diagram.part.HadoopStackDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="OSModel.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="hadoopmodel.diagram.part.HadoopStackDiagramEditorID"
+         defaultHandler="hadoopmodel.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>
