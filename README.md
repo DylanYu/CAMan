@@ -133,13 +133,13 @@ EReference表示了实体间的关系，按照是否有包含关系分为两类�
 在实际使用时应根据具体情况选择正确的关系类型，大多数时候我们并不需要composition关系，平常的association就足够表达两者之间的关系。
 EReference也有上下限，表示关系连接的两个实体的数量。
 
-下图是开发完的元模型实例，这里我们用到了composition、association以及继承来表示类与类之间的关系。
+下图是完整的元模型示例，这里我们用到了composition、association以及继承来表示类与类之间的关系。
 
-<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_all_mmodel.png" width="90%" height="90%"/>
+<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_all_mmodel.png" width="80%" height="80%"/>
 
 ## 3.2 开发decmodel存取模型
 
-在Eclipse Modeling Tool中我们用decmodel来对存取模型进行建模，在decmodel我们会对前一节中开发的元模型中所有的元素进行具体管理的定义，其中包括了这么几种操作：
+在Eclipse Modeling Tool中我们用decmodel来对存取模型进行建模，在decmodel我们会对前一节中开发的元模型中所有的元素进行具体管理的定义，一共包括了这么几种操作：
 
 |name |meta element |parameter |description|
 |-----|-------------|----------|-----------|
@@ -175,7 +175,7 @@ EReference也有上下限，表示关系连接的两个实体的数量。
 成。具体而言，打开decmodel后载入元模型资源，然后在SandTablist插件的选项卡里点击Generate Adapter。
 整个过程被详细描述在下图中，代码自动生成功能是由SM@RT工具支持。
 
-<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_generatecode.png" width="100%" height="100%"/>
+<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_generatecode.png" width="80%" height="80%"/>
 
 ## 3.4 开发GMF Model
 
@@ -210,9 +210,9 @@ Apache、WebAPP到PHP、WebApp~到MySQL的依赖关系作为线，并分别调�
 插件，可以导出该插件或直接作为Eclipse Application运行。在启动的Eclipse Application中，创建一个后缀
 的diagram的运行时模型，这个模型会与一个不带diagram后缀的无图形用户界面模型相对应，它们表示的信息是完全一致的。
 
-下图是开发完的图形用户界面实例：
+下图是完整的图形用户界面示例：
 
-<img src="http://7xj6dq.com1.z0.glb.clouddn.com/webmgt4.PNG" width="100%" height="100%">
+<img src="http://7xj6dq.com1.z0.glb.clouddn.com/webmgt4.PNG" width="80%" height="80%">
 
 # 4. 常见错误处理
 
@@ -240,5 +240,5 @@ Apache、WebAPP到PHP、WebApp~到MySQL的依赖关系作为线，并分别调�
 7. 更换GMF图标后重新运行并没有载入最新的图标
 > 图标文件一定要以.gif为后缀，不接受其他格式的图片，且请确保图片放在了icons/full/obj16文件夹内
 
-8. 试在SandTablist选项卡中生成代码时相应按钮为灰色
+8. 在SandTablist选项卡中生成代码的相应按钮为灰色
 > 关闭decmodel，重新载入所有相关资源，再进行尝试。
