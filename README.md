@@ -105,9 +105,31 @@ EAttribute表示了实体的一个具体属性，如虚拟机的power_state，Ap
 属性设置中有一些特殊部分。**Derived**设置为true说明该属性的值是由其他属性的值导出的，因此只有显示的作用，不能设置值；**ID**设置为true说明该属性的值
 一定和其他对象中的值不同；Changeable设置为false则直接说明该属性值不可更改。在实际使用中这些属性的设置选项应该和实际应用场景相匹配。
 
+下表是对属性的详细解释，仔细阅读有助于你进行正确的设置。
+
+|Property    |Description|
+|------------|:----------|
+|Changeable	|Set this to false if you don't want to allow someone to change this attribute. Usage: Read-only attribute, calculated attribute or something which can only be set once (usualy during construction of the object).|
+|Default Value	|Read-only property provided by EMF which shows the current default value of the attribute.|
+|Default Value Literal	|A string (without quotes) from which EMF will try to create a default value (see above) by using the registered converters for this type of field.|
+|Derived	|The attribute is volatile, transient and non-changeable, ie. it is calculated when the getter is called and not stored when the model is saved to a file and you can't change it directly. The length of a java.lang.List is an example for this.|
+|EContaining Class	|The class which contains this attribute. Automatic attribute maintained by EMF.|
+|EType	|The type (class) of the attribute. In Java, we would say this is the field type.|
+|ID	|Set this to true, to make this attribute (one of) the ID attribute(s) of the class. ID attributes will be used to determine if two objects of a class are equal or uniqueness if you put them into a list which requires that or a java.lang.Set.|
+|Lower Bound|	Integer, >= 0.|
+|Many	|Automatic property. True, if Upper Bound != 1. If true, then this property of the class is a list/set (i.e., the Java field can several values of the same type).|
+|Name	|The name of the property. This will be the name used in the code generator for the field and getters/setters.|
+|Ordered|	If this attribute is a list, you can specifiy if the sequence of values should be ordered (like a list) or if it doesn't matter (set). The default is true but for performance reasons, you can set it to false.|
+|Required	|Automatic property. If true, then Lower Bound is > 0, that is the attribute must be set or you will get an error during loading and saving.|
+|Transient	|Transient attributes are not persistet (saved to a file when the whole model is saved). Usually, calculated fields (like the length of a list) are transient, because the length is already given by the number of items in the file.|
+|Unique|	If Many is true, you can also say that all values must be unique (different). For example, in a list of languages, you want each languages just once.|
+|Unsettable|	EMF can manage another state for an attribute for you: Unset. Unset is not the same as "set to null". Unset means the attribute was never set or eUnset() was called on it to clear it. You can use eIsSet() to find out if the attribute is set or not.|
+|Upper Bound|	Integer, -1 or > 0. You can specify an upper limit for the number of values one can store in this attribute. Use -1 to say: There is no limit.|
+|Volatile	|The value of the attribute is computed every time the getter is called. EMF will not generate a private field to store the value. You will have to fill in the body of the getter yourself.|
+
 ### 3.1.3 关系
 
-EReference表示了实体间的关系，
+EReference表示了实体间的关系，按照是否有包含关系分为两类，一类是最平常的association关系，一类是composition关系
 
 ## 3.2 开发decmodel存取模型
 
@@ -137,15 +159,14 @@ Apache、WebAPP到PHP、WebApp~到MySQL的依赖关系作为线，并分别调�
 映射模型将基础工具和定义的图形进行一一映射，将类映射为点，关系映射为线，并且把元模型和存取模型进行映射。
 我们可以在映射过程中进行具体参数的配置，如类的实例显示的属性项，还需要定义操作对应的监听内容。编写完这个映
 射模型后可以用其导出生成模型。我们在这里最终将基础工具、图形定义和存取模型全部结合起来，并确保其对应关系的
-正确性。由于~GMF~自身的问题，默认情况下映射关系无法维持，我们必须手工将其调整正确。
+正确性。由于GMF自身的问题，默认情况下映射关系无法维持，我们必须手工将其调整正确。
     
 
 ## 3.5 生成图形用户界面
 
 修改生成模型中的插件配置，并对前述映射模型中的配置进行个性化修改，然后使用生成模型生成图形用户界面的
 插件，可以导出该插件或直接作为Eclipse Application运行。在启动的Eclipse Application中，创建一个后缀
-的diagram的运行时模型，这个模型会与一个不带diagram后缀的无图形用户界面模型相对应
-，它们表示的信息是完全一致的。
+的diagram的运行时模型，这个模型会与一个不带diagram后缀的无图形用户界面模型相对应，它们表示的信息是完全一致的。
 
 # 4. 常见错误处理
 
