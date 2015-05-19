@@ -133,13 +133,48 @@ EReference表示了实体间的关系，按照是否有包含关系分为两类�
 在实际使用时应根据具体情况选择正确的关系类型，大多数时候我们并不需要composition关系，平常的association就足够表达两者之间的关系。
 EReference也有上下限，表示关系连接的两个实体的数量。
 
-下图是一个开发完全的元模型实例，这里我们用到了composition、association以及继承来表示类与类之间的关系。
+下图是开发完的元模型实例，这里我们用到了composition、association以及继承来表示类与类之间的关系。
 
-<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_all_mmodel.png" width="100%" height="100%">
+<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_all_mmodel.png" width="90%" height="90%"/>
 
 ## 3.2 开发decmodel存取模型
 
+在Eclipse Modeling Tool中我们用decmodel来对存取模型进行建模，在decmodel我们会对前一节中开发的元模型中所有的元素进行具体管理的定义，其中包括了这么几种操作：
+
+|name |meta element |parameter |description|
+|-----|-------------|----------|-----------|
+|Get| Property (1)| - |get the value of the property|
+|Set| Property (1)| newValue| set the property as newValue|
+|List| Property (*)| - |get a list of values of this property|
+|Add| Property (*)| toAdd |add toAdd into the value list of this property|
+|Remove| Property (*)| toRemove |remove toRemove from the list of this property|
+|Lookfor| Class |condition |find an element according to condition|
+|Identify| Class |other |check if this element equals to other|
+|Auxiliary| Package| - |user-defined auxiliary operations|
+
+完整存取模型的构建从导入元模型开始。我们将元模型中所有的元素都导入到存取模型中，然后为所有的类、
+属性、关系添加相关的操作。如图~\ref{generatecode}~ 左侧所示，我们将完整元模型中的元素一一导入存取模型并显
+示在树状视图中，然后为每一个类、属性和关系的相关操作添加具体的实现代码。
+
+举例而言，我们应该为Server类的image}关系添加一个**Set**操作（以*<Logic::Set>*标签添加）和一个**Get**
+操作（以*<Logic:Get>*标签添加）。对于**Get**操作，我们可以编写详细的代码描述如何调用API获
+得“image”的值（具体代码会被设置为*<Code:Fragment>*标签的Value项中）。对于**Set**操作，我们编
+写详细的代码描述如何通过调用API改变虚拟机的镜像，在虚拟机未启动前该操作只会导致值的更改，在虚拟机启动
+后该操作会导致虚拟机以新的镜像重新载入。我们还为Server类的networks关系添加了**List**
+、**Create**、**Destroy**操作，对**List**操作，我们编写详细的代码描述如何调用API
+获得一个虚拟机所依附的所有虚拟网络，对于**Create**和**Destroy**操作，我们编写详细的代码描
+述如何调用API为一个虚拟机增加或删除所依附的虚拟网络。在软件资源方面，我们为Software类的
+**hostOn**关系添加了**Set**操作，该操作将根据具体情况选择是否在一个虚拟机上删除或安
+装该软件构件。我们为WebApp类的**connectTo**关系添加了**Set**操作，该操作将Web应用
+的数据库依赖指向一个数据库服务端点，具体的操作是将数据库服务端点的监听地址、监听端口、用户名和密码写
+入Web应用的配置文件中覆盖原有设置并重启该Web应用载入新的配置。
+
 ## 3.3 生成同步引擎
+
+在定义完元模型和存取模型后，用于同步运行时模型和运行时系统的同步引擎代码可以在不需要人为修改的情况下自动生
+成。整个过程被详细描述在下图中，代码自动生成功能是由SM@RT工具支持。
+
+<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_generatecode.png" width="100%" height="100%"/>
 
 ## 3.4 开发GMF Model
 
@@ -173,6 +208,10 @@ Apache、WebAPP到PHP、WebApp~到MySQL的依赖关系作为线，并分别调�
 修改生成模型中的插件配置，并对前述映射模型中的配置进行个性化修改，然后使用生成模型生成图形用户界面的
 插件，可以导出该插件或直接作为Eclipse Application运行。在启动的Eclipse Application中，创建一个后缀
 的diagram的运行时模型，这个模型会与一个不带diagram后缀的无图形用户界面模型相对应，它们表示的信息是完全一致的。
+
+下图是开发完的图形用户界面实例：
+
+<img src="http://7xj6dq.com1.z0.glb.clouddn.com/webmgt4.PNG" width="100%" height="100%">
 
 # 4. 常见错误处理
 
