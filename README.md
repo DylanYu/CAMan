@@ -241,4 +241,4 @@ Apache、WebAPP到PHP、WebApp~到MySQL的依赖关系作为线，并分别调�
 > 图标文件一定要以.gif为后缀，不接受其他格式的图片，且请确保图片放在了icons/full/obj16文件夹内
 
 8. 在SandTablist选项卡中生成代码的相应按钮为灰色
-> 关闭decmodel，重新载入所有相关资源，再进行尝试。
+> 关闭decmodel，重新手动载入Ecore元模型，刷新所有属性后再进行尝试。
