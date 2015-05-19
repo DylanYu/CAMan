@@ -129,7 +129,13 @@ EAttribute表示了实体的一个具体属性，如虚拟机的power_state，Ap
 
 ### 3.1.3 关系
 
-EReference表示了实体间的关系，按照是否有包含关系分为两类，一类是最平常的association关系，一类是composition关系
+EReference表示了实体间的关系，按照是否有包含关系分为两类，一类是最平常的association关系，一类是composition关系。
+在实际使用时应根据具体情况选择正确的关系类型，大多数时候我们并不需要composition关系，平常的association就足够表达两者之间的关系。
+EReference也有上下限，表示关系连接的两个实体的数量。
+
+下图是一个开发完全的元模型实例，这里我们用到了composition、association以及继承来表示类与类之间的关系。
+
+<img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_all_mmodel.png" width="100%" height="100%">
 
 ## 3.2 开发decmodel存取模型
 
