@@ -1,7 +1,7 @@
 # CAMan
 Dynamic Cloud Application Management System
 
-## What is CAman?
+## 前言
 
 CAMan (Cloud Application Management System) 是一种基于模型的云应用动态管理技术。该技术在Eclipse Modeling Framework上实现，并且结合了Graphic Modeling Framework提供上层图形用户界面。
 
