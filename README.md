@@ -1,7 +1,7 @@
 # CAMan
 Dynamic Cloud Application Management System
 
-## What is CAman?
+## 前言
 
 CAMan (Cloud Application Management System) 是一种基于模型的云应用动态管理技术。该技术在Eclipse Modeling Framework上实现，并且结合了Graphic Modeling Framework提供上层图形用户界面。
 
@@ -42,6 +42,19 @@ Eclipse Modeling Tool Luna [Windows 32 Bit](https://www.eclipse.org/downloads/do
 如果你的Eclipse Modeling Tool中没有GMF插件，则可以打开*Help*的*Install Modeling Components*，搜寻“Graphic Modeling Framework"并安装。
 
 ## 使用方法
+
+如果你只想尝试使用一下该技术，但并不想进行完整的开发，请参照以下步骤（以Web应用管理系统为例）。
+
+1. 打开配置好的Eclipse Modeling Tool，导入**Web**目录中的**OSModel**项目，注意不需要导入其他以OSModel开头的项目。
+2. 以Ecore视图打开**model**文件夹中的**OSModel.ecore**，修改其Name和URI属性为自己想要的设置
+3. 新建**EMF Generator Model**，选择导入刚刚的**OSModel.ecore**，用该genmodel生成除了**Model Code**之外的其他Code。
+4. 打开**OSModel.decmodel**，右键**Load Resources**导入Ecore模型和Genmodel，在**SandTablist**选项卡中点击**Generate Adapter**，
+将会生成主要的同步引擎代码。
+5. 运行生成的同步引擎。在**OSModel**项目上右键选择**Run As**，以及**Eclipse Application**。将会启动一个新的runtime eclipse，
+新建**Example EMF Model Creation Wizards**，并选择之前指定的模型名字。
+6. 在新建的运行时模型上增加、删除、修改元素，查看效果。
+7. 在原来的Eclipse中右键**OSModel.gmfgen**，然后选择**Generate diagram code**，会生成一个新的项目。启动该项目，
+并新建**Examples**中的**Diagram**模型，即可以使用拖放式图形用户界面。
 
 ## 开发过程
 
