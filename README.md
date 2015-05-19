@@ -1,7 +1,7 @@
 # CAMan
 Dynamic Cloud Application Management System
 
-## 前言
+## What is CAman?
 
 CAMan (Cloud Application Management System) 是一种基于模型的云应用动态管理技术。该技术在Eclipse Modeling Framework上实现，并且结合了Graphic Modeling Framework提供上层图形用户界面。
 
@@ -27,7 +27,7 @@ SandTablist插件需要Eclipse Modeling Framework 3.4，Eclipse-OCL 1.3, EMF-Tra
 下载地址：
 
 Eclipse Modeling Tool Luna [Windows 32 Bit](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-modeling-luna-SR2-win32.zip)
-[Windows 64 Bit](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-modeling-luna-SR2-win32-x86_64.zip)
+，[Windows 64 Bit](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-modeling-luna-SR2-win32-x86_64.zip)
 ，其他平台的下载请到Eclipse官网搜索。
 
 经测试，Indigo版本也同样可以使用，下载地址：
@@ -35,11 +35,13 @@ Eclipse Modeling Tool Luna [Windows 32 Bit](https://www.eclipse.org/downloads/do
 
 ### SM@RT插件
 
-从[这里](http://smatrt.googlecode.com/files/smatrt.zip)下载SM@RT，获得一个压缩文件，里面是一些eclipse插件（\*.jar文件）。以标准方式安装这些插件，具体而言，将这个压缩文件复制到你的eclipse安装路径下，通常是"\*/eclipse/"的形式，在这个路径下可以找到**eclipse.exe**文件，以及一些子文件夹比如“features”、“plugins”。解压缩这个文件，并将5个插件放到“plugins”文件夹下。
+从[这里](http://smatrt.googlecode.com/files/smatrt.zip)下载SM@RT，获得一个压缩文件，里面是一些eclipse插件（\*.jar文件）。以标准方式安装这些插件，即将这个压缩文件复制到你的eclipse安装路径下，通常是"\*/eclipse/"的形式，在这个路径下可以找到**eclipse.exe**文件，以及一些子文件夹比如“features”、“plugins”，解压缩这个文件，并将5个插件放到“plugins”文件夹下。
 
 ### GMF
 
 如果你的Eclipse Modeling Tool中没有GMF插件，则可以打开*Help*的*Install Modeling Components*，搜寻“Graphic Modeling Framework"并安装。
+
+## 开发过程
 
 ## 使用方法
 
@@ -56,22 +58,32 @@ Eclipse Modeling Tool Luna [Windows 32 Bit](https://www.eclipse.org/downloads/do
 7. 在原来的Eclipse中右键**OSModel.gmfgen**，然后选择**Generate diagram code**，会生成一个新的项目。启动该项目，
 并新建**Examples**中的**Diagram**模型，即可以使用拖放式图形用户界面。
 
-## 开发过程
 
 ## 常见错误处理
-
 
 如果出现错误，请查看下面的内容是否能够帮助你
 
 1. gmfgen生成diagram时一直报boolean类型相关错误
-
 >将project的Java版本临时改成jre6，重新生成genmodel，再使用新的gmfgen进行后续步骤。
 
 2. 新建GMF工具时没有任何选项
-
 > 新建GMF Mapping时一定要从root开始。
 
 3. 生成的同步引擎代码中有类型错误
-
 > genmodel中的Model Class Default：Root Extends Class改成org.eclipse.emf.ecore.impl.EObjectImpl
 
+4. 无法增加新的依赖
+> 复制依赖库到在lib文件中，在Eclipse中打开MANIFEST.MF，点击Runtime选项卡，，将新增的依赖库加入Classpath。然后
+点击Dependencies选项卡，增加依赖的项目，并且勾选"Show non-exported package"。
+
+5. 运行项目是报依赖不满足的错误
+> 将"cn.pku"开头的几个包全部加到依赖中，注意是在Dependencies的Reguired Plugin-ins中添加
+
+6. 生成虚拟机时报了OpenStack相关的错误
+> 使用OpenStack API时一定要配合JDK 1.7使用，其他版本都无法正常运行。
+
+7. 更换GMF图标后重新运行并没有载入最新的图标
+> 图标文件一定要以.gif为后缀，不接受其他格式的图片，且请确保图片放在了icons/full/obj16文件夹内
+
+8. 试在SandTablist选项卡中生成代码时相应按钮为灰色
+> 关闭decmodel，重新载入所有相关资源，再进行尝试。
