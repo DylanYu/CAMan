@@ -158,7 +158,7 @@ EReference也有上下限，表示关系连接的两个实体的数量。
 
 举例而言，我们应该为Server类的image}关系添加一个**Set**操作（以*<Logic::Set>*标签添加）和一个**Get**
 操作（以*<Logic:Get>*标签添加）。对于**Get**操作，我们可以编写详细的代码描述如何调用API获
-得“image”的值（具体代码会被设置为*<Code:Fragment>*标签的Value项中）。对于**Set**操作，我们编
+得“image”的值（具体代码会被设置为*\<Code:Fragment\>*标签的Value项中）。对于**Set**操作，我们编
 写详细的代码描述如何通过调用API改变虚拟机的镜像，在虚拟机未启动前该操作只会导致值的更改，在虚拟机启动
 后该操作会导致虚拟机以新的镜像重新载入。我们还为Server类的networks关系添加了**List**
 、**Create**、**Destroy**操作，对**List**操作，我们编写详细的代码描述如何调用API
@@ -172,7 +172,8 @@ EReference也有上下限，表示关系连接的两个实体的数量。
 ## 3.3 生成同步引擎
 
 在定义完元模型和存取模型后，用于同步运行时模型和运行时系统的同步引擎代码可以在不需要人为修改的情况下自动生
-成。整个过程被详细描述在下图中，代码自动生成功能是由SM@RT工具支持。
+成。具体而言，打开decmodel后载入元模型资源，然后在SandTablist插件的选项卡里点击Generate Adapter。
+整个过程被详细描述在下图中，代码自动生成功能是由SM@RT工具支持。
 
 <img src="http://7xj6dq.com1.z0.glb.clouddn.com/4_generatecode.png" width="100%" height="100%"/>
 
@@ -192,8 +193,8 @@ Apache、WebAPP到PHP、WebApp~到MySQL的依赖关系作为线，并分别调�
 
 编写基础工具是为了将所有的类和关系进行注册，是实现“拖放式部署”的基础，每一个工具都对应了一个图形界面
 上的拖放操作，在这里注册的工具与存取模型中的具体操作会对应起来。我们在这里编写了Apache、PHP、WebApp
-和MySQL连接到Server时会触发的安装操作，WebApp连接到PHP和MySQL会触发的配置操作，以及Server被生成会触发的创
-建云端实例操作。
+和MySQL连接到Server时会触发的安装操作，WebApp连接到PHP和MySQL会触发的配置操作，以及Server被生成会触发的
+创建云端实例操作。
 
 ### 3.4.3 映射模型和生成模型
 
