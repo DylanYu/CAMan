@@ -16,6 +16,7 @@ Dongliang Yu <yudl.nju@gmail.com>
     2. 使用方法
     3. 开发过程
     4. 常见错误处理
+    5. 参考资料
 
 # 0. 前言
 
@@ -242,7 +243,7 @@ Apache、WebAPP到PHP、WebApp到MySQL的依赖关系作为线，并分别调整
 8. 在SandTablist选项卡中生成代码的相应按钮为灰色
 > 关闭decmodel，重新手动载入Ecore元模型，刷新所有属性后再进行尝试。
 
-# 4. Reference
+# 5. Reference
 
 [1] EMF Tutorial 1: http://eclipsesource.com/blogs/tutorials/emf-tutorial/
 
