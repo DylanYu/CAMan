@@ -231,7 +231,7 @@ Apache、WebAPP到PHP、WebApp到MySQL的依赖关系作为线，并分别调整
 > 复制依赖库到在lib文件中，在Eclipse中打开MANIFEST.MF，点击Runtime选项卡，，将新增的依赖库加入Classpath。然后
 点击Dependencies选项卡，增加依赖的项目，并且勾选"Show non-exported package"。
 
-5. 运行项目是报依赖不满足的错误
+5. 运行项目时报依赖不满足的错误
 > 将"cn.pku"开头的几个包全部加到依赖中，注意是在Dependencies的Reguired Plugin-ins中添加
 
 6. 生成虚拟机时报了OpenStack相关的错误
