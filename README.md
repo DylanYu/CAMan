@@ -26,7 +26,13 @@ CAMan (Cloud Application Management System) 是一种基于模型的云应用动
 
 **注意**：所有环境配置在Windows 7平台进行过完整的测试，尽管我相信在其他平台同样可以正确运行，但无法完全保证，如果出现问题请参阅*常见错误处理*寻找解决方法。
 
-## 1.1 Java环境
+## 1.1 OpenStack部署
+
+本系统在云平台上实现，可以使用各类公有或私有云。为方便实验可在内部部署OpenStack私有云平台。
+
+[RDO](https://www.rdoproject.org/)是用于在Red Hat平台部署OpenStack的工具，参阅官方的[Quick Start](https://www.rdoproject.org/Quickstart)可以快速部署单节点OpenStack。如果需要在多节点环境下测试，请参考我们编写的[配置文件](http://pan.baidu.com/s/1c0FBLz6)进行部署。
+
+## 1.2 Java环境
 
 本系统的多项依赖技术都需要特定的Java版本，经实际测试Java SE 1.6或1.7可以在大多数情况下满足要求，
 对于特殊情况请参阅*常见错误处理*。
@@ -37,7 +43,7 @@ CAMan (Cloud Application Management System) 是一种基于模型的云应用动
 
 [Java SE Development Kit 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 
-## 1.2 Eclipse以及相关基础插件
+## 1.3 Eclipse以及相关基础插件
 
 本系统依赖的Eclipse SandTablist插件需要Eclipse Modeling Framework 3.4，Eclipse-OCL 1.3, EMF-Transaction 1.3。在实际使用中推荐下载Eclipse Modeling Tool，该工具集成了绝大多数相关框架和插件。
 
@@ -50,13 +56,17 @@ Eclipse Modeling Tool Luna [Windows 32 Bit](https://www.eclipse.org/downloads/do
 经测试，Indigo版本也同样可以使用，下载地址：
 [Eclipse Modeling Tool Indigo](https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/indigosr2)
 
-## 1.3 SM@RT插件
+## 1.4 SM@RT插件
 
 从[这里](http://smatrt.googlecode.com/files/smatrt.zip)下载SM@RT，获得一个压缩文件，里面是一些eclipse插件（\*.jar文件）。以标准方式安装这些插件，即将这个压缩文件复制到你的eclipse安装路径下，通常是"\*/eclipse/"的形式，在这个路径下可以找到**eclipse.exe**文件，以及一些子文件夹比如“features”、“plugins”，解压缩这个文件，并将5个插件放到“plugins”文件夹下。
 
-## 1.4 GMF
+## 1.5 GMF
 
 如果你的Eclipse Modeling Tool中没有GMF插件，则可以打开*Help*的*Install Modeling Components*，搜寻“Graphic Modeling Framework"并安装。
+
+## 1.6 Maven
+
+我们使用Maven处理项目依赖，请参照[官方文档](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)安装和配置Maven，并在项目目录下运行安装命令从远程拉取所有依赖包。
 
 # 2. 使用方法
 
